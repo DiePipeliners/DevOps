@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  devops:
+    container_name: devops
+    image: pipeliners:latest
+    ports:
+      - '5000:5000'
