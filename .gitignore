@@ -131,3 +131,7 @@ dmypy.json
 # Local temp files
 .idea/
 *.tfstate
+.terraform/
+.terraform.lock.hcl
+*tfstate.backup
+.vagrant/
