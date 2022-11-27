@@ -1,6 +1,7 @@
 ---
 - name: Ansible Example
   hosts: all
+  become: true
   remote_user: root
 
   tasks:
