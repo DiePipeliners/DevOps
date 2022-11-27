@@ -1,0 +1,44 @@
+---
+- name: Ansible Example
+  hosts: all
+  become: true
+  remote_user: root
+  vars:
+    os_environment:
+      - key: FLASK_APP
+        value: /vagrant/app.py
+
+  tasks:
+
+  - name: Copying the Directory and its contents
+    become: true 
+    copy:
+      src: "{{ playbook_dir }}/../../app"
+      dest: "/vagrant"
+      owner: vagrant
+      mode: 0644
+
+  - name: Update
+    ansible.builtin.apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+  - name: customize /etc/environment
+    ansible.builtin.lineinfile:
+      dest: "/etc/environment"
+      state: present
+      regexp: "^{{ item.key }}="
+      line: "{{ item.key }}={{ item.value }}"
+    with_items: "{{ os_environment }}"
+
+  - name: Install python3-pip
+    ansible.builtin.apt:
+      name: python3-pip
+      state: present
+
+  - name: Run installation script
+    command: python3 -m pip install -r /vagrant/requirements.txt
+
+  - name: Execute flask run
+    command: python3 -m flask run
+    poll: 0
+
+  - debug: var=out.stdout_lines    
