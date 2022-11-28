@@ -27,5 +27,11 @@ def hello():
        return redirect(url_for('index'))
 
 
+def add(a,b):
+    return a+b
+
+def returnGreeting(name):
+    return "Cześć "+name
+
 if __name__ == '__main__':
    app.run()
