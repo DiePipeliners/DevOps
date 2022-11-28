@@ -31,7 +31,7 @@ def add(a,b):
     return a+b
 
 def returnGreeting(name):
-    return "Cześć "+name
+    return "Hallo "+name
 
 if __name__ == '__main__':
    app.run()

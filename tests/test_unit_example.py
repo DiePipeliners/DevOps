@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_Greeting(self):
         res = returnGreeting("Tomasz")
-        self.assertEqual("Cześć Tomasz",res)
+        self.assertEqual("Hallo Tomasz",res)
 
 if __name__ == '__main__':
     unittest.main()
