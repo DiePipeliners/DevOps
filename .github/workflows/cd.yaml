@@ -25,8 +25,8 @@ jobs:
           push: true
           tags: ${{
             secrets.DOCKER_HUB_USERNAME
-            }}/<pipeliners>:v1.0,${{
+            }}/pipeliners:v1.0,${{
             secrets.DOCKER_HUB_USERNAME
-            }}/<pipeliners>:${{ github.sha }}
+            }}/pipeliners:${{ github.sha }}
 
 
