@@ -4,7 +4,7 @@ EXPOSE 5000
 
 ENV PYTHONDONTWRITEBYCODE = 1
 
-COPY requirements.txt .
+COPY ../requirements.txt .
 RUN python -m pip install -r requirements.txt
 
 COPY . .
