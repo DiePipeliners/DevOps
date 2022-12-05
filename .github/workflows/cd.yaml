@@ -23,8 +23,7 @@ jobs:
           context: .
           file: ./app/Dockerfile
           push: true
-          tags: ${{
-            secrets.DOCKER_HUB_USERNAME}}/pipeliners:v1.0,${{secrets.DOCKER_HUB_USERNAME}}/pipeliners:${{ github.sha }}
+          tags: ${{secrets.DOCKER_HUB_USERNAME}}/pipeliners:v1.0,${{secrets.DOCKER_HUB_USERNAME}}/pipeliners:${{ github.sha }}
   deploy:
     runs-on: ubuntu-latest
     needs: build
