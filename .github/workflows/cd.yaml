@@ -23,6 +23,10 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_HUB_USERNAME} }/<docker_repository>:latest,${{secrets.DOCKER_HUB_USERNAME} }/<docker_repository>:${{ github.sha }}
+          tags: ${{
+            secrets.DOCKER_HUB_USERNAME
+            }}/<docker_repository>:latest,${{
+            secrets.DOCKER_HUB_USERNAME
+            }}/<docker_repository>:${{ github.sha }}
 
 
