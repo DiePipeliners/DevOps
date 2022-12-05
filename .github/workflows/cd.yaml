@@ -47,5 +47,5 @@ jobs:
 
           images: ${{
             secrets.DOCKER_HUB_USERNAME
-            }}/pipeliners:${{ github.sha }}'
+            }}/pipeliners:${{ github.sha }}
 
