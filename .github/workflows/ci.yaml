@@ -23,4 +23,6 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest
+          pip install Flask
+          pip install Werkzeug
           python -m pytest -v
