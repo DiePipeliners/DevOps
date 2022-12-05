@@ -25,8 +25,8 @@ jobs:
           push: true
           tags: ${{
             secrets.DOCKER_HUB_USERNAME
-            }}/<docker_repository>:latest,${{
+            }}/<pipeliners>:latest,${{
             secrets.DOCKER_HUB_USERNAME
-            }}/<docker_repository>:${{ github.sha }}
+            }}/<pipeliners>:${{ github.sha }}
 
 
