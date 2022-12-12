@@ -10,4 +10,4 @@ scrape_configs:
   
   - job_name: "devops"
     static_configs:
-    - targets: ["app:5000"]
+    - targets: ["devops:5000"]
