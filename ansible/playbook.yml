@@ -35,7 +35,7 @@
       state: present
 
   - name: Run installation script
-    command: python3 -m pip install -r /vagrant/app/requirements.txt
+    command: python3 -m pip install -r /vagrant/requirements.txt
 
   - name: Execute flask run
     command: 'python3 -m flask run --host=0.0.0.0'
