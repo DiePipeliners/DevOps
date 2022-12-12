@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
 #  config.vm.provision "shell", inline: <<-SHELL
 #    apt-get update
 #    apt-get install -y python3-pip
-#    python3 -m pip install -r /vagrant/app/requirements.txt
+#    python3 -m pip install -r /vagrant/requirements.txt
 #    export FLASK_APP=/vagrant/app/app.py
 #    python3 -m flask run --host=0.0.0.0
 #  SHELL
