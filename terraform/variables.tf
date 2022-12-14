@@ -22,7 +22,7 @@ variable "web-service" {
     default = {
         "name" = "pipeliners-web-app"
         "docker-image" = "tomaszkania2000/pipeliners"
-        "docker-tag" = "v1.0"
+        "docker-tag" = "latest"
         "docker-app-port" = "5000"
     }
 }
